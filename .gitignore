@@ -1,0 +1,4 @@
+arch32/*.o
+arch32/out
+arch64/*.o
+arch64/out
