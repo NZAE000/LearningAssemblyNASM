@@ -6,7 +6,6 @@ section .text ;; Code (read only!!)
     extern printf ;; 'extern' is a adicional directive: printf is a extern global symbol
 
 prn: ;; Any function
-
     push ebp
     mov  ebp, esp
     
