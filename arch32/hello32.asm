@@ -6,10 +6,11 @@ section .text ;; Code (read only!!)
     extern printf ;; 'extern' is a adicional directive: printf is a extern global symbol
 
 prn: ;; Any function
+
     push ebp
     mov  ebp, esp
     
-    ;; Before call, load parameters in this stack
+    ;; Before call, load parameters in this 'stack' (call conventions (cdecl, stdcall))
     mov  eax, msg ;; Load msg address to eax register
     push eax      ;; Can be do 'push' to hand:  sub esp, 4  then  mov [esp], eax  ([esp] is to access the stack at position esp)
     ;;push msg    ;; Can also be done directly, instead of doing it with a registry
