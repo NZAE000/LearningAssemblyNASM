@@ -5,6 +5,12 @@ section .text
     global main
 
 main:
-    ;;mov eax 0
-    xor eax, eax
+    ;; Save stackframe above.
+    push ebp
+    mov ebp, esp
+
+    ;; Move esp and restore ebp.
+    pop ebp
+    
+    xor eax, eax ;; mov eax, 0
     ret
